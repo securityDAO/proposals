@@ -4,7 +4,7 @@
 
 We ☯️ want to compensate contributors at the level commensurate with the realized value of receiving their time, attention, and care. 🌱
 
-Unlike the default expectation in the lifecycle of businesesses under corporate models of governance 🏢 - **at the outset**, labor exploitation and below market wages with ISOs carrying promises of eventual riches / spending and hiring frenzy subject to narrow decision authority (and biases!) that **typically follows a large funding round** - DAOs carry a promise of more efficiently allocating capital, and more sustainable ways of scaling organizations and attracting contributors.
+Unlike the default expectation in the lifecycle of firms under corporate models of governance 🏢 - **at the outset**, labor exploitation and below market wages with ISOs carrying promises of eventual riches / spending and hiring frenzy subject to narrow decision authority (and biases!) that **typically follows a large funding round** - DAOs carry a promise of more efficiently allocating capital, and more sustainable ways of scaling organizations and attracting contributors.
 
 **Desiderata**
 
