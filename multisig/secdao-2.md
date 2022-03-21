@@ -8,10 +8,10 @@ Unlike the default expectation in the lifecycle of firms under corporate models 
 
 **Desiderata**
 
-(i) the record of individual's contributions is made explicit (e.g. through `git`)
-(ii) the overall merit and concrete impact of contributions on DAO's overall realized value can be sufficiently isolated
-(iii) some part of DAOs value can be made liquid and the treasury has enough for slippage / longer reconciliation cycles (e.g. through payments for services in an already-liquid token, a token of the DAO itself, grants etc)
-(iv) pathways to onboard and contribute to DAOs are prominent and expectations are set clearly
+- the record of individual's contributions is made explicit (e.g. through `git`)
+- the overall merit and concrete impact of contributions on DAO's overall realized value can be sufficiently isolated
+- some part of DAOs value can be made liquid and the treasury has enough for slippage / longer reconciliation cycles (e.g. through payments for services in an already-liquid token, a token of the DAO itself, grants etc)
+- pathways to onboard and contribute to DAOs are prominent and expectations are set clearly
 
 Assuming all of these hold, it is not only _possible_ to strive to offer highly competitive effective hourly rates to the contributors right away (through a combination of **UBI + bounties**), it is _imperative_ upon us to find a way to do so in the context of broader emancipatory project of freeing the human spirit from the confines of wage slavery. ⚑✊
 
