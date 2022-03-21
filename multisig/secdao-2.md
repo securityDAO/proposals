@@ -34,11 +34,11 @@ Over time, this structure has shown its limitations as an incentive mechanism th
 ## Actions to be carried out on-chain
 * deploy `16,000 $UST` equivalent of treasury at the time of execution to [`$STARS / $ATOM` liquidity pool on Osmosis #611](https://info.osmosis.zone/pool/611) with 14 days unbonding period (maximum yield)
 * establish a **secdao multisig** for bounties (3/5 passing threshold) with the following on the multisig:
-- @netlenka
-- @devcubed
-- @CrashLoopBackoff
-- @rakataprime
-- @bmorphism
+  - @netlenka
+  - @devcubed
+  - @CrashLoopBackoff
+  - @rakataprime
+  - @bmorphism
 * transfer remaining funds from `IWP-5.md` to the multisig for bounty-based contributions
 
 ## Actions to be carried out off-chain
