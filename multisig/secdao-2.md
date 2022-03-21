@@ -28,7 +28,7 @@ This proposal seeks to:
 
 A compensation scheme that involves a recurring payment in an agreed-upon amount of token to individual contributor wallets is warranted when the scope of a given task or broad ownership area (e.g. ensuring infrastructure uptime) requires _rare_ knowledge on an ongoing basis, and if various factors (e.g. original research, decision autonomy) make it impossible to specify a well-defined bounty ahead of time.
 
-In the course of SecurityDAOs operation from the time of the[IWP-5](https://github.com/InterWasm/DAO/blob/main/IWPs/iwp-5.md) grant until now, a simple structure for weekly payments of `256 $JUNO - full-time, 128 $JUNO - part-time` was instituted and served us well in attracting and retaining contributors.
+In the course of SecurityDAOs operation from the time of the [IWP-5](https://github.com/InterWasm/DAO/blob/main/IWPs/iwp-5.md) grant until now, a simple structure for weekly payments of `256 $JUNO - full-time, 128 $JUNO - part-time` was instituted and served us well in attracting and retaining contributors.
 
 Over time, this structure has shown its limitations as an incentive mechanism that delivers timely outcomes and now needs revision.
 
