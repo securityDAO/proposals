@@ -39,7 +39,7 @@ Over time, this structure has shown its limitations as an incentive mechanism th
   - @CrashLoopBackoff
   - @rakataprime
   - @bmorphism
-* transfer remaining funds from `IWP-5.md` to the multisig for bounty-based contributions
+* transfer remaining funds from `IWP-5.md` to the multisig for allocation to bounties with subsequent governance decisions
 
 ## Actions to be carried out off-chain
 * define initial set of high level goals for the DAO and `$TOKEN` allocations for bounties to help achieve them - they can then be broken down into specific bounties in subsequent proposals
