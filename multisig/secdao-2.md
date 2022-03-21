@@ -26,7 +26,7 @@ This proposal seeks to:
 - properly incentivize atomic / one-time contributions on the critical path to fulfilling DAOs mission with a system of bounties
 - create impetus for transitioning the treasury to a multisig (so as to adjudicate bounty completion with on-chain governance)
 
-A compensation scheme that involves a recurring payment in fixed, agreed-upon amount of token to individual contributor wallets is warranted when the scope of a given task or broad ownership area (e.g. ensuring infrastructure uptime) requires _rare_ knowledge on an ongoing basis, and if various factors (e.g. original research, decision autonomy) make it impossible to specify a well-defined bounty ahead of time.
+A compensation scheme that involves a recurring payment in an agreed-upon amount of token to individual contributor wallets is warranted when the scope of a given task or broad ownership area (e.g. ensuring infrastructure uptime) requires _rare_ knowledge on an ongoing basis, and if various factors (e.g. original research, decision autonomy) make it impossible to specify a well-defined bounty ahead of time.
 
 In the course of SecurityDAOs operation from the time of the[IWP-5](https://github.com/InterWasm/DAO/blob/main/IWPs/iwp-5.md) grant until now, a simple structure for weekly payments of `256 $JUNO - full-time, 128 $JUNO - part-time` was instituted and served us well in attracting and retaining contributors.
 
