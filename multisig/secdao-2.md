@@ -59,7 +59,9 @@ Over time, this structure has shown its limitations as an incentive mechanism th
 * bounties that are stolen will only return 75% of the original to the non-initiating member and with the initiating member receiving 25% pending a multisig vote with 50% of members voting in favor.
 * normal bounties shall be deemed completed by a multisig vote with 50% of members voting in favor
 * SecDao may vote to make grants out of the treasury as a year end bonus with only a simple majority vote.  Daoist must be contributing for at least 6 months to be eligbile to be included on the year end multisig. 
-* Deviations from this compensation policy may only be completed by a 2/3 majority vote where the beneficiary (person or persons benefitting) are forced to abstain in their vote. 
+* Deviations from this compensation policy may only be completed by a 2/3 majority vote where the beneficiary (person or persons benefitting) are forced to abstain in their vote.  
+* 90% of treasury shall be put into yield bearing assets outside of immediate bounty pay and unexpected expenses fund
+
 
 
 
