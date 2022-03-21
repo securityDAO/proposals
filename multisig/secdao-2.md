@@ -21,7 +21,7 @@ Assuming all of these hold, it is not only _possible_ to strive to offer highly 
 # What
 This proposal seeks to:
 
-- signal a pause in manual recurring payments **pending another proposal defining their precise structure** - the pause is to ensure that in the process of bootstrapping SecurityDAO, enough liquid funds are available for any operational needs that may arise between now (2022-03-21) and the next infusion of funds
+- signal a pause in manually submitted weekly UBI payments **pending another proposal defining their precise structure** - the pause is to ensure that in the process of bootstrapping SecurityDAO, enough liquid funds are available for any operational needs that may arise between now (2022-03-21) and the next infusion of funds
 - benefit from a unique moment in `$STARS - $ATOM` liquidity mining yield opportunities for the treasury funds
 - properly incentivize atomic / one-time contributions on the critical path to fulfilling DAOs mission with a system of bounties
 - create impetus for transitioning the treasury to a multisig (so as to adjudicate bounty completion with on-chain governance)
