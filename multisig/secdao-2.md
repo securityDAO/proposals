@@ -32,7 +32,7 @@ In the course of SecurityDAOs operation from the time of the [IWP-5](https://git
 
 Over time, this structure has shown its limitations as an incentive mechanism that delivers timely outcomes and now needs revision.
 
-`secdao-2` aims to make this pause in UBI explicit, propose concrete ways in which the treasury can be allocated in the meantime that can be verifiably executed on-chain.
+`secdao-2` aims to make this pause in UBI explicit, as well as propose concrete ways in which the treasury can be allocated in the meantime that can be verifiably executed on-chain.
 
 ## Actions to be carried out on-chain
 * deploy `16,000 $UST` equivalent of treasury at the time of execution to [`$STARS / $ATOM` liquidity pool on Osmosis #611](https://info.osmosis.zone/pool/611) with 14 days unbonding period (maximum yield)
