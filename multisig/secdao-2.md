@@ -1,27 +1,47 @@
-# Compensation Freeze, Compensation Adjustment, Bounty Pool Establishment 
+# Switch to manual bounties-only 🤠 compensation until the structured recurring compensation w/ peer feedback through `cw-ubi` is shipped or another proposal to resume
 ## Why
+![image](https://user-images.githubusercontent.com/1236584/159340485-127d084f-f8ae-4240-ab3b-820d1c186956.png)
 
-Current compensation of 256 Juno UBI per week is not sustainable for the future.  Current budget allocation is misaligned with Dao's needs and goals.  If previous plans had worekd out and everyone had executed successfully we would not be in this situation. 
+We ☯️ want to compensate contributors at the level commensurate with the realized value of receiving their time, attention, and care. 🌱
 
-The main causes are that the initial DAO grant was never intended to support more than 1-2 people and only through Feb 2022, the DAO is not being compensated at levels comparable to what competition is charging for audits, the second big audit for us (DaoDao) is not paying a market rate for the audit in raw tokens, the audit pipeline sales lifecycle is slower than initially percieved, the team working on the validators has failed to deliver a working mainnet validator in a timely way, and the team has not chosen to persue an equity/token compensation model that would be amenable to raising capital from investors. 
+Unlike the default expectation in the lifecycle of businesesses under corporate models of governance 🏢 - **at the outset**, labor exploitation and below market wages with ISOs carrying promises of eventual riches / spending and hiring frenzy subject to narrow decision authority (and biases!) that **typically follows a large funding round** - DAOs carry a promise of more efficiently allocating capital, and more sustainable ways of scaling organizations and attracting contributors.
 
-Almost all early stage startups compensate members at rates far below what we are currently compensating members at.  Addtionally, the original members have now recieved between 50-70k equivalent in JUNO.  One option to bring pay into line with other starups / daos would be to freeze compensation at around 50-70K for the entire first year compensation.  
+**Desiderata**
 
-Instead of proposing an annual pay freeze, this proposes to freeze pay for two weeks to submit further grants and continue developing sales leads in order to reduce the uncertainty around near term funding and sales.  This will also change the compensation to be fixed to only be based on renewable sources of treasury yield instead of eating out of the principle.   
+(i) the record of individual's contributions is made explicit (e.g. through `git`)
+(ii) the overall merit and concrete impact of contributions on DAO's overall realized value can be sufficiently isolated
+(iii) some part of DAOs value can be made liquid and the treasury has enough for slippage / longer reconciliation cycles (e.g. through payments for services in an already-liquid token, a token of the DAO itself, grants etc)
+(iv) pathways to onboard and contribute to DAOs are prominent and expectations are set clearly
 
-To rectify this situation this proposals seeks to enact the following actions:
+Assuming all of these hold, it is not only _possible_ to strive to offer highly competitive effective hourly rates to the contributors right away (through a combination of **UBI + bounties**), it is _imperative_ upon us to find a way to do so in the context of broader emancipatory project of freeing the human spirit from the confines of wage slavery. ⚑✊
 
-* Immediately freeze all compensation for 2 weeks 
-* Estabilish a bounty pool system on a monthly cadence ( All bounties are determined / outlined at the begining of a month based on yield farming and validator rewards only.  The bounty payout will never be allowed to exceed the weekly rewards.  If a multiweek bounty were to exceed the max cap for the week,  the total bounties for the week would added together and payed out each week on a linearly scaled basis to each of the recipients. 
-* Total compensation bounty pool is to be no more than treasury staked rewards and validator rewards per week 
-* 90% of bounty pool is pre-accolated to vision-centric tasks related to grants, audits,  or smart contracts.  Examples of tasks that qualify for this pool include audit template, audit sales, audit formatting, audit drafting, audit intake and presales, grant drafting, audit vulnerabilty finding, and smart contract development. Examples of tasks that are explicitly excluded from this are all non-rust software development efforts, devops tasks, cloud infrastructure management tasks, validator-related maintaince / monitoring, travel to conferences, internal time spent on bounty system interactions, git issue curation tasks, and social media posts. 
+# What
+This proposal seeks to:
 
-These actions will allow us to establish a sustainable compensation floor for the DAO which will steadily increase with time.  By focusing on sustainablity, we can remove the runaway concerns and focus more on execution and delivery.  
+- signal a pause in manual recurring payments **pending another proposal defining their precise structure** - the pause is to ensure that in the process of bootstrapping SecurityDAO, enough liquid funds are available for any operational needs that may arise between now (2022-03-21) and the next infusion of funds
+- benefit from a unique moment in `$STARS - $ATOM` liquidity mining yield opportunities for the treasury funds
+- properly incentivize atomic / one-time contributions on the critical path to fulfilling DAOs mission with a system of bounties
+- create impetus for transitioning the treasury to a multisig (so as to adjudicate bounty completion with on-chain governance)
+
+A recurring payment in token is warranted when the scope of a given task or broad ownership area (e.g. ensuring infrastructure uptime) requires _rare_ knowledge on an ongoing basis, and if various factors (e.g. original research, decision autonomy) make it impossible to specify a well-defined bounty ahead of time.
+
+In the course of SecurityDAOs operation from the time of the[IWP-5](https://github.com/InterWasm/DAO/blob/main/IWPs/iwp-5.md) grant until now, a simple structure for weekly payments of `256 $JUNO - full-time, 128 $JUNO - part-time` was instituted and served us well in attracting and retaining contributors.
+
+Over time, this structure has shown its limitations as an incentive mechanism that delivers timely outcomes and now needs revision.
+
+`secdao-2` aims to make this pause in UBI explicit, propose concrete ways in which the treasury can be allocated in the meantime that can be verifiably executed on-chain.
+
+## Actions to be carried out on-chain
+* deploy `16,000 $UST` equivalent of treasury at the time of execution to [`$STARS / $ATOM` liquidity pool on Osmosis #611](https://info.osmosis.zone/pool/611) with 14 days unbonding period (maximum yield)
+* establish a **secdao multisig** for bounties (3/5 passing threshold) with the following on the multisig:
+- @netlenka
+- @devcubed
+- @CrashLoopBackoff
+- @rakataprime
+- @bmorphism
+* transfer remaining funds from `IWP-5.md` to the multisig for bounty-based contributions
 
 ## Actions to be carried out off-chain
-
-* Estabilishment of April, 2022 Bounty Tasks / Task pool
-* Estabilishment of Bounty System Standard Operating Procedures
-
-## Costs
-No Immediate Costs 
+* define initial set of high level goals for the DAO and `$TOKEN` allocations for bounties to help achieve them - they can then be broken down into specific bounties in subsequent proposals
+* consensus on a fair bounty lifecycle, to also act as `cw-bounty` functional requirements and seed its spec in the grant proposal
+* prepare shell scripts to quickly pay out the bounty when fulfilled (i.e. `Msg` templates with the right payout amounts and customizable adddress) by executing a command that uses `junod --ledger <>` type interaction with the multisig
