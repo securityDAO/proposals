@@ -1,3 +1,7 @@
+**multisig:** [WAGMI](https://daodao.zone/multisig/juno1zn6wefwh00cuara90ctn7aqyfnhh34djyqnpd8w83z0x9ta88m6q5lq4tp)
+**proposal name:** secadao-2
+**proposal description:** https://github.com/secdao/proposals/blob/main/multisig/secdao-2.md
+
 # Switch to manual bounties-only 🤠 compensation until the structured recurring compensation w/ peer feedback through `cw-ubi` is shipped / another proposal to resume is passed
 ## Why
 ![image](https://user-images.githubusercontent.com/1236584/159340485-127d084f-f8ae-4240-ab3b-820d1c186956.png)
