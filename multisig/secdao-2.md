@@ -20,12 +20,8 @@ These actions will allow us to establish a sustainable compensation floor for th
 
 ## Actions to be carried out off-chain
 
-Estabilishment of April, 2022 Bounty Tasks / Task pool
-Estabilishment of Bounty System Standard Operating Procedures
+* Estabilishment of April, 2022 Bounty Tasks / Task pool
+* Estabilishment of Bounty System Standard Operating Procedures
 
 ## Costs
 No Immediate Costs 
-
-
-# Multisig proposal
-vote here: 
