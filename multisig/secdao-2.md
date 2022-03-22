@@ -40,7 +40,7 @@ This stops with the passing of the current proposal and henceforth the previous 
     - `256 $JUNO` to @rakataprime
     - `256 $JUNO` to @bmorphism
     - `256 $JUNO` to @CrashLoopBackOff
-    - (already advanced) `256 $JUNO` to @devcubed
+    - (already [advanced](https://github.com/secdao/proposals/blob/secdao-2-3-refi/multisig/secdao-1.md)) `256 $JUNO` to @devcubed
 * those willing to become secdao multisig members will need to [establish](https://docs.junonetwork.io/cli/modules/keys) `junod` wallets using CLI - either add new keys, import existing ones using the seedphrase `junod keys add --recover`, or start one with `junod add keys --ledger` if Ledger - subsequently, these will be referred to as [HumanAddr{@GitHubUsername}](https://docs.rs/cosmwasm-std/0.9.2/cosmwasm_std/struct.HumanAddr.html)
 - wallet addresses provided to `#treasury` within 24 hours of this proposal passing will be included in subsequent steps
 * instantiate our own **secdao multisig** contract using [`junod` interactions](https://docs.junonetwork.io/smart-contracts-and-junod-development/tutorial-erc-20/initialise)
