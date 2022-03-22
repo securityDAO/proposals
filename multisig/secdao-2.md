@@ -42,7 +42,7 @@ This stops with the passing of the current proposal and henceforth the previous 
     - `256 $JUNO` to @CrashLoopBackOff
     - (already [advanced](https://github.com/secdao/proposals/blob/secdao-2-3-refi/multisig/secdao-1.md)) `256 $JUNO` to @devcubed
 * those willing to become secdao multisig members will need to [establish](https://docs.junonetwork.io/cli/modules/keys) `junod` wallets using CLI - either add new keys, import existing ones using the seedphrase `junod keys add --recover`, or start one with `junod add keys --ledger` if Ledger - subsequently, these will be referred to as [HumanAddr{@GitHubUsername}](https://docs.rs/cosmwasm-std/0.9.2/cosmwasm_std/struct.HumanAddr.html)
-- wallet addresses provided to `#treasury` within 24 hours of this proposal passing will be included in subsequent steps
+- after you get comfortable with `junod` recovery and interactions, please provide your wallet address for the new multisig with a commit to this document in this branch replacing "HumanAddr{@nickname}" in the instantiate message below with your actual address at any point up until `secdao-2` and `secdao-3` being raised for the [**WAGMI** vote](https://daodao.zone/multisig/juno1zn6wefwh00cuara90ctn7aqyfnhh34djyqnpd8w83z0x9ta88m6q5lq4tp) on DAODAO - anyone who fails to commit this in time will still be included using the previous wallet, but with `weight: 0`
 * instantiate our own **secdao multisig** contract using [`junod` interactions](https://docs.junonetwork.io/smart-contracts-and-junod-development/tutorial-erc-20/initialise)
   - new instance of [cw3-fixed-multisig](https://github.com/CosmWasm/cw-plus/tree/main/contracts/cw3-fixed-multisig) for `junod` / [Message](https://docs.rs/cosmwasm-std/0.16.6/cosmwasm_std/enum.WasmMsg.html)-based governance with the following configuration (`3/5 votes` passing threshold, `24 hours` timeout):
       ```
@@ -54,7 +54,8 @@ This stops with the passing of the current proposal and henceforth the previous 
         {"addr": "HumanAddr{@rakataprime}", "weight": 1},
         {"addr": "HumanAddr{@bmorphism}", "weight": 1},
         {"addr": "HumanAddr{@CrashLoopBackOff}", "weight": 1},
-        {"addr": "HumanAddr{@devcubed}, "weight": 1}],
+        {"addr": "HumanAddr{@devcubed}, "weight": 1},
+        {"addr": "juno1rvazh6ck86jqtckc3n3cprp0dkuv2zkcwwn3tm", "weight": 0],
       "threshold": 3,
       "max_voting_period": 86400
       ...
