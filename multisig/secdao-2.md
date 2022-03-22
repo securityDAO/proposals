@@ -1,5 +1,5 @@
 # secdao-2
-**TL;DR** switch to manual bounties-only 🤠 compensation until the structured recurring compensation w/ peer feedback through `cw-ubi` is shipped / another proposal to resume is passed + improve multisig security by establishing a new multisig using a well-reviewed contract
+**TL;DR** switch to manual bounties as % of weekly yield only 🤠 compensation until the structured recurring compensation w/ peer feedback through `cw-ubi` is shipped / another proposal to resume is passed + improve multisig security by establishing a new multisig using a well-reviewed contract
 ## Why
 ![image](https://user-images.githubusercontent.com/1236584/159340485-127d084f-f8ae-4240-ab3b-820d1c186956.png)
 
@@ -63,7 +63,7 @@ This stops with the passing of the current proposal and henceforth the previous 
   * to be used for governance around bounty payouts and treasury allocation, prioritizing on-chain Message-driven proposals
 * after backing up the seed phrase, delete and re-import wallets locally, transfer `4.20 $JUNO` from **WAGMI** and make sure multisig interactions with `junod` are still possible
 * following a successful test, transfer the remaining funds from `IWP-5.md` to the multisig for allocation to bounties with subsequent governance decisions
-* accept any additional grants from individuals into **secdao multisig** treasury as `$JUNO` sent to multisig address - any tx's of `≥ 256 $JUNO` will receive a `cw-721` NFT that has **no utility or governance impact**
+* accept any additional grants from individuals into **secdao multisig** treasury as `$JUNO` sent to multisig address - each `256 $JUNO` in an individual grant will be rewarded with a **secdao-awarded** `SG-721` NFT that has **no utility or governance impact** (but _could_ be used in airdrop decisions when transitioning to DAOs and subDAOs following completion of [dao-contracts](https://github.com/DA0-DA0/dao-contracts/tree/zeke/contracts-v1/contracts) audit and transition to `v1` contracts for governance)
 
 ## Off-chain actions
 * to coincide with this proposal being in `main`, also arrive at the soft consensus about (`#gov` signaling) and merge [secdao-3](https://github.com/secdao/proposals/blob/secdao-02-feedback/multisig/secdao-3.md) containing
