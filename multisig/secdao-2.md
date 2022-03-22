@@ -1,5 +1,5 @@
 # secdao-2
-**TL;DR** switch to manual bounties as % of weekly yield only 🤠 compensation until the structured recurring compensation w/ peer feedback through `cw-ubi` is shipped / another proposal to resume is passed + improve multisig security by establishing a new multisig using a well-reviewed contract
+**TL;DR** switch to manual bounties as % of weekly yield only 🤠 for compensation until the structured recurring compensation w/ peer feedback through `cw-ubi` is shipped / another proposal to resume is passed + improve multisig security by transitioning all remaining funds multisig using a well-reviewed contract + begin accepting individual grants / non-tax-deductible `$JUNO` to the new governance structure
 ## Why
 ![image](https://user-images.githubusercontent.com/1236584/159340485-127d084f-f8ae-4240-ab3b-820d1c186956.png)
 
