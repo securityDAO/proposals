@@ -1,67 +1,77 @@
 # secdao-2
-**TL;DR** Switch to manual bounties-only 🤠 compensation until the structured recurring compensation w/ peer feedback through `cw-ubi` is shipped / another proposal to resume is passed
+**TL;DR** switch to manual bounties-only 🤠 compensation until the structured recurring compensation w/ peer feedback through `cw-ubi` is shipped / another proposal to resume is passed + improve multisig security by establishing a new multisig using a well-reviewed contract
 ## Why
 ![image](https://user-images.githubusercontent.com/1236584/159340485-127d084f-f8ae-4240-ab3b-820d1c186956.png)
 
 We ☯️ want to compensate contributors at the level commensurate with the realized value of receiving their time, attention, and care. 🌱
 
-To do so, we need to depart from the default expectations in the lifecycle of startups under corporate models of governance 🏢: **at the outset**, labor exploitation and below market wages with ISOs carrying promises of eventual riches, then, **typically following a large funding round** - a spending and hiring frenzy governed through a narrow decision authority (and biases!).
+At the same time, to optimally allocate DAO's treasury, rather than drawing payments to contributors weekly unconditionally (unsustainable at the current burn rate), we would instead prefer a shift to:
+- the model of using yield on staking, DeFi instruments and other regenerative sources of `$TOKEN` for any recurring payments with areas of responsibility and expectations defined explicitly and subject to consensus and periodic performance review
+- any direct payment to be reserved for **completed** contributions to the DAO that are well-specified in advance as *bounties* and **not to exceed the yield on principal for that week** (est. at `300 $JUNO` / week for the entire DAO)
+- any unclaimed yield to be re-allocated to the total token invested in the yield-generating instrument subject to **secdao multisig** governance by Saturday midnight or delegated to **SecurityDAO Junø validator**
 
-DAOs carry a promise of more efficiently allocating capital, and come with a hope of more sustainable ways of scaling organizations and attracting contributors.
 
-**Desiderata**
-
-- the record of individual's contributions is made explicit (e.g. through `git`)
-- the overall merit and concrete impact of contributions on DAO's overall realized value can be sufficiently isolated
-- some part of DAOs value can be made liquid and the treasury has enough for slippage / longer reconciliation cycles (e.g. through payments for services in an already-liquid token, a token of the DAO itself, grants etc)
-- pathways to onboard and contribute to the DAO are prominent and expectations are set clearly
-
-Assuming all of these hold, it is not only _possible_ to strive to offer highly competitive effective hourly rates to the contributors right away (through a combination of **UBI + bounties**), it is _imperative_ upon us to find a way to do so in the context of broader emancipatory project of freeing the human spirit from the confines of wage slavery. ⚑✊
 
 # What
-This proposal seeks to:
-
-- signal a pause in manually submitted weekly UBI payments **pending another proposal defining their precise structure** - the pause is to ensure that in the process of bootstrapping SecurityDAO, enough liquid funds are available for any operational needs that may arise between now (2022-03-21) and the next infusion of funds
-- benefit from a unique moment in `$STARS - $ATOM` liquidity mining yield opportunities for the treasury funds
-- properly incentivize atomic / one-time contributions on the critical path to fulfilling DAOs mission with a system of bounties
-- create impetus for transitioning the treasury to a multisig (so as to adjudicate bounty completion with on-chain governance)
+- signal a pause in manually submitted weekly UBI payments **pending another proposal defining their precise structure** - the pause is to ensure that in the process of bootstrapping SecurityDAO, enough liquid funds are available for any operational needs that may arise between `2022-03-22` and the next infusion of funds
+- properly incentivize atomic / one-time contributions on the critical path to fulfilling DAOs mission with a system of bounties defined in `secdao-3`
+- transition **WAGMI** to **secdao multisig** that uses a more secure CosmWasm contract and includes the option to use a hardware `Ledger` wallet with `junod`
+- start realizing yield on the token that is in the treasury now and not designated for bounty payouts
+- replace 
 
 A compensation scheme that involves a recurring payment in an agreed-upon amount of token to individual contributor wallets is warranted when the scope of a given task or broad ownership area (e.g. ensuring infrastructure uptime) requires _rare_ knowledge on an ongoing basis, and if various factors (e.g. original research, decision autonomy) make it impossible to specify a well-defined bounty ahead of time.
 
-In the course of SecurityDAOs operation from the time of the [IWP-5](https://github.com/InterWasm/DAO/blob/main/IWPs/iwp-5.md) grant until now, a simple structure for weekly payments of `256 $JUNO - full-time, 128 $JUNO - part-time` was instituted and served us well in attracting and retaining contributors.
+In the course of SecurityDAOs operation from the time of the [IWP-5](https://github.com/InterWasm/DAO/blob/main/IWPs/iwp-5.md) grant until now, a simple structure for weekly payments of `256 $JUNO - full-time, 128 $JUNO - part-time` (+ corresponding [advance](https://github.com/secdao/proposals/blob/secdao-02-feedback/multisig/secdao-1.md) to @devcubed) was instituted and served us well in attracting and retaining contributors. Over time, this structure has shown its limitations as an incentive mechanism that delivers timely outcomes and now needs revision.
 
-Over time, this structure has shown its limitations as an incentive mechanism that delivers timely outcomes and now needs revision.
-
-`secdao-2` aims to make this pause in UBI explicit, as well as propose concrete ways in which the treasury can be allocated in the meantime that can be verifiably executed on-chain.
-
-## Actions to be carried out on-chain
-* deploy `16,000 $UST` equivalent of treasury at the time of execution to [`$STARS / $ATOM` liquidity pool on Osmosis #611](https://info.osmosis.zone/pool/611) with 14 days unbonding period (maximum yield)
-* establish a **secdao multisig** for bounties (3/5 passing threshold) with the following on the multisig:
-  - @netlenka
-  - @devcubed
-  - @CrashLoopBackoff
-  - @rakataprime
-  - @bmorphism
-* transfer remaining funds from `IWP-5.md` to the multisig for allocation to bounties with subsequent governance decisions
-* Immediately freeze all compensation for 2 weeks or no more UBI multisigs as of 3/21
+This stops with the passing of the current proposal and henceforth the previous arrangement will be referred to as `ubi-legacy`. At the same time while `cw-ubi` and `cw-bounty` standard contracts that will codify the new incentives for individual contributors (in themselves, subject to funding by several ongoing [grant proposals](https://github.com/secdao/grants/pull/1)), 
 
 
-## Actions to be carried out off-chain
-* define initial set of high level goals for the DAO and `$TOKEN` allocations for bounties to help achieve them - they can then be broken down into specific bounties in subsequent proposals
-* consensus on a fair bounty lifecycle, to also act as `cw-bounty` functional requirements and seed its spec in the grant proposal
-* prepare shell scripts to quickly pay out the bounty when fulfilled (i.e. `Msg` templates with the right payout amounts and customizable adddress) by executing a command that uses `junod --ledger <>` type interaction with the multisig
-* Estabilish a bounty pool system on a monthly cadence ( All bounties are determined / outlined at the begining of a month based on yield farming and validator rewards only. The bounty payout will never be allowed to exceed the weekly rewards. If a multiweek bounty were to exceed the max cap for the week, the total bounties for the week would added together and payed out each week on a linearly scaled basis to each of the recipients.  This will reset at the end of the month or defined sprint end
-* the first week of a month or sprint shall be reserved for planning, learning 
-* Total compensation bounty pool weekly payout is to be no more than treasury staked rewards and validator rewards per week
-* 90% of bounty pool is pre-accolated to vision-centric main pool tasks related to grants, audits, or smart contracts . Examples of tasks that qualify for main pool include audit template, audit sales, audit formatting, audit drafting, audit intake and presales, grant drafting, audit vulnerabilty finding, and smart contract development. 
-* Examples of tasks that are explicitly excluded from the main pool tasks are all non-rust software development efforts, devops tasks, cloud infrastructure management tasks, validator-related maintaince / monitoring, travel to conferences, internal time spent on bounty system interactions, git issue curation tasks, and social media posts\
-* bounties will not be able to be stolen by other non-initiating members without consent of the bounty initiating member if the bounty is within a predefined estimated completion window during a sprint
-* bounties that are stolen will only return 75% of the original to the non-initiating member and with the initiating member receiving 25% pending a multisig vote with 50% of members voting in favor.
-* normal bounties shall be deemed completed by a multisig vote with 50% of members voting in favor
-* SecDao may vote to make grants out of the treasury as a year end bonus with only a simple majority vote.  Daoist must be contributing for at least 6 months to be eligbile to be included on the year end multisig. 
-* Deviations from this compensation policy may only be completed by a 2/3 majority vote where the beneficiary (person or persons benefitting) are forced to abstain in their vote.  
-* 90% of treasury shall be put into yield bearing assets outside of immediate bounty pay and unexpected expenses fund
+`secdao-2` (this proposal) describes the steps to prepare the DAO to this new mode of operation, signals the stop of `ubi-legacy`
 
+`secdao-3` provides the initial list of bounties and their rewards as % of the weekly yield, as well as procedures for defining, completing, and rewarding the initial set of bounties
 
+`secdao-4` specifies initial yield-generating instruments whose yield will fund the bounties
 
+## On-chain actions
+* last UBI payout from [WAGMI](https://daodao.zone/multisig/juno1zn6wefwh00cuara90ctn7aqyfnhh34djyqnpd8w83z0x9ta88m6q5lq4tp) under the legacy scheme until `cw-ubi`
+  - covers all contributions between `2022-03-06 - 2022-03-19`
+  - token payments in the following amounts:
+    - `256 $JUNO` to @netlenka
+    - `256 $JUNO` to @rakataprime
+    - `256 $JUNO` to @bmorphism
+    - `256 $JUNO` to @CrashLoopBackOff
+    - (already advanced) `256 $JUNO` to @devcubed
+* those willing to become secdao multisig members will need to [establish](https://docs.junonetwork.io/cli/modules/keys) `junod` wallets using CLI - either add new keys, import existing ones using the seedphrase `junod keys add --recover`, or start one with `junod add keys --ledger` if Ledger - subsequently, these will be referred to as [HumanAddr{@GitHubUsername}](https://docs.rs/cosmwasm-std/0.9.2/cosmwasm_std/struct.HumanAddr.html)
+- wallet addresses provided to `#treasury` within 24 hours of this proposal passing will be included in subsequent steps
+* instantiate our own **secdao multisig** contract using [`junod` interactions](https://docs.junonetwork.io/smart-contracts-and-junod-development/tutorial-erc-20/initialise)
+  - new instance of [cw3-fixed-multisig](https://github.com/CosmWasm/cw-plus/tree/main/contracts/cw3-fixed-multisig) for `junod` / [Message](https://docs.rs/cosmwasm-std/0.16.6/cosmwasm_std/enum.WasmMsg.html)-based governance with the following configuration (`3/5 votes` passing threshold, `24 hours` timeout):
+      ```
+      {
+      ...
+      "voters": 
+      [
+        {"addr": "HumanAddr{@netlenka}", "weight": 1},
+        {"addr": "HumanAddr{@rakataprime}", "weight": 1},
+        {"addr": "HumanAddr{@bmorphism}", "weight": 1},
+        {"addr": "HumanAddr{@CrashLoopBackOff}", "weight": 1},
+        {"addr": "HumanAddr{@devcubed}, "weight": 1}],
+      "threshold": 3,
+      "max_voting_period": 86400
+      ...
+      }
+      ```
+  * to be used for governance around bounty payouts and treasury allocation, prioritizing on-chain Message-driven proposals
+* after backing up the seed phrase, delete and re-import wallets locally, transfer `4.20 $JUNO` from **WAGMI** and make sure multisig interactions with `junod` are still possible
+* following a successful test, transfer the remaining funds from `IWP-5.md` to the multisig for allocation to bounties with subsequent governance decisions
+* accept any additional grants from individuals into **secdao multisig** treasury as `$JUNO` sent to multisig address - any tx's of `≥ 256 $JUNO` will receive a `cw-721` NFT that has **no utility or governance impact**
 
+## Off-chain actions
+* to coincide with this proposal being in `main`, also arrive at the soft consensus about (`#gov` signaling) and merge [secdao-3](https://github.com/secdao/proposals/blob/secdao-02-feedback/multisig/secdao-3.md) containing
+  * initial set of high level goals for the DAO and `$TOKEN` allocations for bounties to help achieve them - they can then be broken down into specific bounties in subsequent proposals
+  * precise bounty lifecycle definition to be manually executed as **secdao multisig** votes until `cw-bounty` is shipped - capturing result of soft consesus in `#gov`
+* instructions on how to use `junod` for the purposes of this proposal by @bmorphism to be added to GitHub + sent to `#gov`
+* (everyone) collaborate on shell scripts to quickly pay out the bounty when fulfilled - ultimately to help individual members with `junod` CLI [Message interactions](https://github.com/CosmWasm/cw-plus/blob/main/contracts/cw3-fixed-multisig/src/msg.rs#L24)
+  * submit a proposal: `Propose`
+  * vote on a proposal: `Vote`
+  * execute a proposal that passes: `Execute`
+  * close proposals that time out: `Close`
