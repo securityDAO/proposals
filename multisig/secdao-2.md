@@ -78,7 +78,7 @@ This stops with the passing of the current proposal and henceforth the previous 
         {"addr": "HumanAddr{@netlenka}", "weight": 1},
         {"addr": "HumanAddr{@rakataprime}", "weight": 1},
         {"addr": "HumanAddr{@bmorphism}", "weight": 1},
-        {"addr": "HumanAddr{@CrashLoopBackOff}", "weight": 1},
+        {"addr": "juno1mz3z4q89zlycut3yv07mej0cvlgx3kdcxg3u27", "weight": 1},
         {"addr": "HumanAddr{@devcubed}, "weight": 1},
         {"addr": "juno1rvazh6ck86jqtckc3n3cprp0dkuv2zkcwwn3tm", "weight": 0],
       "threshold": 3,
