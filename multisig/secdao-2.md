@@ -33,7 +33,7 @@ This stops with the passing of the current proposal and henceforth the previous 
 `secdao-4` specifies initial yield-generating instruments whose yield will fund the bounties
 
 ## On-chain actions
-* last UBI payout from [WAGMI](https://daodao.zone/multisig/juno1zn6wefwh00cuara90ctn7aqyfnhh34djyqnpd8w83z0x9ta88m6q5lq4tp) under the legacy scheme until `cw-ubi`
+* last UBI payout from [WAGMI](https://daodao.zone/multisig/juno1zn6wefwh00cuara90ctn7aqyfnhh34djyqnpd8w83z0x9ta88m6q5lq4tp) under the legacy scheme until `cw-ubi` is shipped
   - covers all contributions between `2022-03-06 - 2022-03-19`
   - token payments in the following amounts:
     - `256 $JUNO` to @netlenka
@@ -41,10 +41,13 @@ This stops with the passing of the current proposal and henceforth the previous 
     - `256 $JUNO` to @bmorphism
     - `256 $JUNO` to @CrashLoopBackOff
     - (already [advanced](https://github.com/secdao/proposals/blob/secdao-2-3-refi/multisig/secdao-1.md)) `256 $JUNO` to @devcubed
-* those willing to become secdao multisig members will need to [establish](https://docs.junonetwork.io/cli/modules/keys) `junod` wallets using CLI - either add new keys, import existing ones using the seedphrase `junod keys add --recover`, or start one with `junod add keys --ledger` if Ledger - subsequently, these will be referred to as [HumanAddr{@GitHubUsername}](https://docs.rs/cosmwasm-std/0.9.2/cosmwasm_std/struct.HumanAddr.html)
-- after you get comfortable with `junod` recovery and interactions, please provide your wallet address for the new multisig with a commit to this document in this branch replacing "HumanAddr{@nickname}" in the instantiate message below with your actual address at any point up until `secdao-2` and `secdao-3` being raised for the [**WAGMI** vote](https://daodao.zone/multisig/juno1zn6wefwh00cuara90ctn7aqyfnhh34djyqnpd8w83z0x9ta88m6q5lq4tp) on DAODAO - anyone who fails to commit this in time will still be included using the previous wallet, but with `weight: 0`
-* instantiate our own **secdao multisig** contract using [`junod` interactions](https://docs.junonetwork.io/smart-contracts-and-junod-development/tutorial-erc-20/initialise)
-  - new instance of [cw3-fixed-multisig](https://github.com/CosmWasm/cw-plus/tree/main/contracts/cw3-fixed-multisig) for `junod` / [Message](https://docs.rs/cosmwasm-std/0.16.6/cosmwasm_std/enum.WasmMsg.html)-based governance with the following configuration (`3/5 votes` passing threshold, `24 hours` timeout):
+* those willing to become secdao multisig members will need to [establish](https://docs.junonetwork.io/cli/modules/keys) `junod` wallets using CLI - either add new keys, import existing ones using the seedphrase `junod keys add --recover`, or start one with `junod add keys --ledger` if Ledger
+  - after backing up your new wallet's keys / mnemonic seed phrase, delete and try reimporting wallets locally with `junod` to convince yourself that you can
+  - if you want to be on the new multisig, you will need to make a commit to this file while it is still under review, replacing the corresponding [`HumanAddr{@GitHubUsername}`](https://docs.rs/cosmwasm-std/0.9.2/cosmwasm_std/struct.HumanAddr.html) below with the resulting wallet address to be used with `junod tx wasm instantiate` message
+  - you will be expected to use this wallet to participate in **governance around bounties, selecting yield instruments for treasury, and any other valid CosmWasm contract [`Message`](https://docs.rs/cosmwasm-std/0.16.6/cosmwasm_std/enum.WasmMsg.html)s to be put forth as a multisig proposal** - and while doing so, to be comfortable **using `junod` client CLI and scripts that aid in its use** (Keplr integration / custom UI are possible in the future, but not presently prioritized)
+  - if you are comfortable with this responsibility, please make the commit containing your actual address at any point up until this branch remains unmerged into `main`, preceding the [**WAGMI** vote](https://daodao.zone/multisig/juno1zn6wefwh00cuara90ctn7aqyfnhh34djyqnpd8w83z0x9ta88m6q5lq4tp) on DAODAO
+  - anyone who does not commit their address to the proposal in time will still be included using their last known address, but with `weight: 0`, i.e. they will retain access to current **secdao** Element rooms, this repository, as well as use `junod` to raise proposals for multisig votes - they will not, however, be able to vote as such
+  - the exact `voters` block resulting from this process to be used to initialize the new multisig with [`junod` interactions](https://docs.junonetwork.io/smart-contracts-and-junod-development/tutorial-erc-20/initialise) to make the new instance of [cw3-fixed-multisig](https://github.com/CosmWasm/cw-plus/tree/main/contracts/cw3-fixed-multisig) for `junod` / [Message](https://docs.rs/cosmwasm-std/0.16.6/cosmwasm_std/enum.WasmMsg.html)-based governance with the following voting configuration (`3/5 votes` passing threshold, `24 hours` timeout):
       ```
       {
       ...
@@ -61,8 +64,7 @@ This stops with the passing of the current proposal and henceforth the previous 
       ...
       }
       ```
-  * to be used for governance around bounty payouts and treasury allocation, prioritizing on-chain Message-driven proposals
-* after backing up the seed phrase, delete and re-import wallets locally, transfer `4.20 $JUNO` from **WAGMI** and make sure multisig interactions with `junod` are still possible
+* as a multisig now, attempt to transfer `4.20 $JUNO` from **WAGMI** to the new **secdao multisig** to ensure everything is operational
 * following a successful test, transfer the remaining funds from `IWP-5.md` to the multisig for allocation to bounties with subsequent governance decisions
 * accept any additional grants from individuals into **secdao multisig** treasury as `$JUNO` sent to multisig address - each `256 $JUNO` in an individual grant will be rewarded with a **secdao-awarded** `SG-721` NFT that has **no utility or governance impact** (but _could_ be used in airdrop decisions when transitioning to DAOs and subDAOs following completion of [dao-contracts](https://github.com/DA0-DA0/dao-contracts/tree/zeke/contracts-v1/contracts) audit and transition to `v1` contracts for governance)
 
