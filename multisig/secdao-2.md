@@ -75,11 +75,11 @@ This stops with the passing of the current proposal and henceforth the previous 
       ...
       "voters": 
       [
-        {"addr": "HumanAddr{@netlenka}", "weight": 1},
-        {"addr": "HumanAddr{@rakataprime}", "weight": 1},
-        {"addr": "HumanAddr{@bmorphism}", "weight": 1},
+        {"addr": "HumanAddr{@netlenka}", "weight": 2},
+        {"addr": "juno12f9k9a922qpzcwmgt50utd5cfa5ksnl0q33yxh", "weight": 3},
+        {"addr": "HumanAddr{@bmorphism}", "weight": 3},
         {"addr": "juno1mz3z4q89zlycut3yv07mej0cvlgx3kdcxg3u27", "weight": 1},
-        {"addr": "HumanAddr{@devcubed}, "weight": 1},
+        {"addr": "HumanAddr{@devcubed}, "weight": 2},
         {"addr": "juno1rvazh6ck86jqtckc3n3cprp0dkuv2zkcwwn3tm", "weight": 0},
         {"addr": "juno175q6smvgnuec5e62rs4chnu5cs8d98q2xgf4rx", "weight": 0}],
       "threshold": 3,
