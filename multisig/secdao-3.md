@@ -46,5 +46,6 @@ This will be implemented using `cw-bounty` starting for April 2022, as first bou
 
 # Off-chain actions
 
+Further development of procedures and processes may occur offchain.
 
 # Goals
