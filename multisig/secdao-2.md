@@ -82,7 +82,7 @@ This stops with the passing of the current proposal and henceforth the previous 
         {"addr": "HumanAddr{@devcubed}, "weight": 2},
         {"addr": "juno1rvazh6ck86jqtckc3n3cprp0dkuv2zkcwwn3tm", "weight": 0},
         {"addr": "juno175q6smvgnuec5e62rs4chnu5cs8d98q2xgf4rx", "weight": 0}],
-      "threshold": 3,
+      "threshold": 6,
       "max_voting_period": 86400
       ...
       }
