@@ -1,8 +1,55 @@
 ![gmi](https://user-images.githubusercontent.com/1236584/159620261-462f7475-5ac8-4061-957f-3ebcf8ad9624.png)
 
-
 # secdao-2 - a more perfect consensus 🕹
+`cw3-flex-multisig` instances
 
+## CTF
+### ring-wasm
+Examples:
+
+https://github.com/CosmWasm/cw-plus#compiling 🌌 your daily Pluriverse alpha leaks post 🙆🏽 -- for those who code -- if you have gone through these steps _in the past_ for whatever reasons (don't cheat by doing so now or claiming that you did, you will not make it - i.e. eventual ngmi 😝) -- but if you have ever run the command cited or a related relevant command, and especially in the context cw20, there is a meritdrop you can ape into if you additionally encrypt the secret string in the Junø contract at <> -- and sign it using your private key with junod
+
+In the already-complied `.wasm` file there is a string that identifies it as belonging to a particular organization - what is that organization? (Hint: you need to use a wasm disassembler and extract strings / convert to the right encoding to be able to display)
+## multisigs (future DAOs and subDAOs)
+### DAO ring-0 {Ledger required}
+- owns de::ns
+- gets all treasury funds now there
+- carries out treasury allocation
+
+@daoistone:1, @daoisttwo:1, ..., @daoistn:1, @ring-legal: n + 1 {effectively veto power for instance!}
+@fellowtravelerone: 0, ... and everyone has to be a non-voting member: 0,
+ 
+threshold: 100% only
+### subDAO seed: ring-infra - 100 points
+@paul: 1, @tom: 1, @olena: 0, and everyone else who is not 1
+How to set up a local SSD four-node k8s cluster with recovery from rolling blackout of VMs in the region in the way that allows to scale the node count / maximizes IOPS
+### subDAO seed ring-wasm - 100 points
+@barton: 1, @tom: 0, @olena: 0
+- develops individual grants and actually carries out bounties
+### ... ring-defi - 100 points
+- maximizes yield
+### ring-uiux - 100 points
+- a dApp that has Keplr integration and allows one to sign strings entered into a text field with their private key
+- create a interaction flow for a hardware wallet that doesn't sucks
+### ring-redteam - 100 points
+- run a pentest against a horcrux-using validator
+- fork a testnet that has badly configured validators
+### ring-legal - 100 points
+@barton: 1, @logan: 1, @olena: 1, @tom: 1, @paul: 1
+- drives legal structures for various jurisdictions
+- handles defense / offense expenses
+### ring-fellow-travelers - 100 points
+(educational, never more than $1k equiv, everyone starts with `weight: 1` - every new member starts with ability to experiment with low stakes)
+- the first rung of interaction with the DAO - newcomers
+- Execute contract interactions - submit proposals, vote on proposals, submit proposals to other rings that are gated more strongly ^^
+- {evil mode} submit a proposal that changes governance in a way that favors them or breaks it / denial of service (in which case they advance to weight: 1 on red-team, if infra attack - ring-infra weight: 1, if contract level ring-wasm weight: 1)
+## On-chain actions
+### Transfer ownership over [secdao](https://dens.sh/ids/secdao) name to ring-0 (`<to be instantiated>`) from `IWP-5` funds wallet (`juno1j37...`)
+### Transfer treasury and any assets in Osmosis or otherwise part of `IWP-5` funds to ring-0
+### Define compensation primitives and execute on them (e.g. the substance of )
+### Fund treasuries of each individual multisig if necessary for ongoing costs or projects
+
+## **BELOW is PREVIOUS DRAFT, INTEGRATE AFTER ADDRESSING THE CORE POINTS**
 Following extensive code review ahead of the [Prop 17 unity proposal](https://commonwealth.im/juno/discussion/4102-prop-17-unity-win-win-win) being put to a vote and should it pass, a pressisng need for an audited multisig contract to remove risks to `$JUNØ` [CCN token saga](https://twitter.com/JoeAbbey/status/1506327517296308240) through inclusive [governance as code](https://github.com/DA0-DA0/dao-contracts/blob/zeke/contracts-v1/contracts/cw3-multisig/src/contract.rs#L116), [we at SecurityDAO](https://secdao.xyz) are ready to declare `cw3-fixed-multisig` secure and move **all of our liquid token** / governance to it!
 
 On-chain contract address of audited `cw3-fixed-multisig`: <>
