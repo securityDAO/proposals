@@ -22,12 +22,13 @@ In the already-complied `.wasm` file there is a string that identifies it as bel
 threshold: 100% only
 ### subDAO seed: ring-infra - 100 points
 @paul: 1, @tom: 1, @olena: 0, @logan: 1 and everyone else who is not 1
-Release an automated deployment (ie: docker, ansible) of a juno full node on the juno-1 mainnet (ie: docker, ansible) that is fully synced with the chain. Then submit the message that states your node is fully synced, and any code used to achive that state.
+#### Release an automated deployment (ie: docker, ansible) of a juno full node on the juno-1 mainnet (ie: docker, ansible) that is fully synced with the chain. Then submit the message that states your node is fully synced, and any code used to achive that state.
 ### subDAO seed ring-wasm - 100 points
 @barton: 1, @tom: 0, @olena: 0
 - develops individual grants and actually carries out bounties
 ### ... ring-defi - 100 points
 - maximizes yield
+#### Generate a 30 day change history of JUNO using code (not copy pasting from a website). Then submit the change history and that code used to generate it.
 ### ring-uiux - 100 points
 - a dApp that has Keplr integration and allows one to sign strings entered into a text field with their private key
 - create a interaction flow for a hardware wallet that doesn't sucks
