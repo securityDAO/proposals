@@ -21,7 +21,7 @@ In the already-complied `.wasm` file there is a string that identifies it as bel
  
 threshold: 100% only
 ### subDAO seed: ring-infra - 100 points
-@paul: 1, @tom: 1, @olena: 0, and everyone else who is not 1
+@paul: 1, @tom: 1, @olena: 0, @logan: 1 and everyone else who is not 1
 Release an automated deployment (ie: docker, ansible) of a juno full node on the juno-1 mainnet (ie: docker, ansible) that is fully synced with the chain. Then submit the message that states your node is fully synced, and any code used to achive that state.
 ### subDAO seed ring-wasm - 100 points
 @barton: 1, @tom: 0, @olena: 0
