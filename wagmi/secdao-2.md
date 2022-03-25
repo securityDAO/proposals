@@ -10,6 +10,9 @@ Examples:
 https://github.com/CosmWasm/cw-plus#compiling 🌌 your daily Pluriverse alpha leaks post 🙆🏽 -- for those who code -- if you have gone through these steps _in the past_ for whatever reasons (don't cheat by doing so now or claiming that you did, you will not make it - i.e. eventual ngmi 😝) -- but if you have ever run the command cited or a related relevant command, and especially in the context cw20, there is a meritdrop you can ape into if you additionally encrypt the secret string in the Junø contract at <> -- and sign it using your private key with junod
 
 In the already-complied `.wasm` file there is a string that identifies it as belonging to a particular organization - what is that organization? (Hint: you need to use a wasm disassembler and extract strings / convert to the right encoding to be able to display)
+
+
+
 ## multisigs (future DAOs and subDAOs)
 ### DAO ring-0 {Ledger required}
 - owns de::ns
@@ -24,8 +27,12 @@ threshold: 100% only
 @paul: 1, @tom: 1, @olena: 0, @logan: 1 and everyone else who is not 1
 #### Release an automated deployment (ie: docker, ansible) of a juno full node on the juno-1 mainnet (ie: docker, ansible) that is fully synced with the chain. Then submit the message that states your node is fully synced, and any code used to achive that state.
 ### subDAO seed ring-wasm - 100 points
-@barton: 1, @tom: 0, @olena: 0
+#### Identify source from wasm file or juno mainnet contract code
+@barton: 1, @tom: 0, @olena: 0, @logan: 1
 - develops individual grants and actually carries out bounties
+- main audit vulnerablity finding group. 
+
+
 ### ... ring-defi - 100 points
 - maximizes yield
 #### Generate a 30 day change history of JUNO using code (not copy pasting from a website). Then submit the change history and that code used to generate it.
@@ -39,6 +46,8 @@ threshold: 100% only
 @barton: 1, @logan: 1, @olena: 1, @tom: 1, @paul: 1
 - drives legal structures for various jurisdictions
 - handles defense / offense expenses
+- attorneys have veto power over all proposals
+
 ### ring-fellow-travelers - 100 points
 (educational, never more than $1k equiv, everyone starts with `weight: 1` - every new member starts with ability to experiment with low stakes)
 - the first rung of interaction with the DAO - newcomers
