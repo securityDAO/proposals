@@ -24,11 +24,11 @@ In the already-complied `.wasm` file there is a string that identifies it as bel
  
 threshold: 100% only
 ### subDAO seed: ring-infra - 100 points
-@paul: 1, @tom: 1, @olena: 0, @logan: 1 and everyone else who is not 1
+@paul: 1, @olena: 0, @logan: 1 and everyone else who is not 1
 #### Release an automated deployment (ie: docker, ansible) of a juno full node on the juno-1 mainnet (ie: docker, ansible) that is fully synced with the chain. Then submit the message that states your node is fully synced, and any code used to achive that state.
 ### subDAO seed ring-wasm - 100 points
 #### Identify source from wasm file or juno mainnet contract code
-@barton: 1, @tom: 0, @olena: 0, @logan: 1
+@barton: 1, @olena: 0, @logan: 1
 - develops individual grants and actually carries out bounties
 - main audit vulnerablity finding group. 
 
@@ -43,7 +43,7 @@ threshold: 100% only
 - run a pentest against a horcrux-using validator
 - fork a testnet that has badly configured validators
 ### ring-legal - 100 points
-@barton: 1, @logan: 1, @olena: 1, @tom: 1, @paul: 1
+@barton: 1, @logan: 1, @olena: 1, @paul: 1
 - drives legal structures for various jurisdictions
 - handles defense / offense expenses
 - attorneys have veto power over all proposals
@@ -118,7 +118,6 @@ This stops with the passing of the current proposal and henceforth the previous 
     - `256 $JUNO` to @netlenka
     - `256 $JUNO` to @rakataprime
     - `256 $JUNO` to @bmorphism
-    - `256 $JUNO` to @CrashLoopBackOff
     - (already [advanced](https://github.com/secdao/proposals/blob/secdao-2-3-refi/multisig/secdao-1.md)) `256 $JUNO` to @devcubed
 * those willing to become secdao multisig members will need to [establish](https://docs.junonetwork.io/cli/modules/keys) `junod` wallets using CLI - either add new keys, import existing ones using the seedphrase `junod keys add --recover`, or start one with `junod add keys --ledger` if Ledger
   - after backing up your new wallet's keys / mnemonic seed phrase, delete and try reimporting wallets locally with `junod` to convince yourself that you can
@@ -135,7 +134,6 @@ This stops with the passing of the current proposal and henceforth the previous 
         {"addr": "HumanAddr{@netlenka}", "weight": 2},
         {"addr": "juno12f9k9a922qpzcwmgt50utd5cfa5ksnl0q33yxh", "weight": 3},
         {"addr": "HumanAddr{@bmorphism}", "weight": 3},
-        {"addr": "juno1mz3z4q89zlycut3yv07mej0cvlgx3kdcxg3u27", "weight": 1},
         {"addr": "HumanAddr{@devcubed}, "weight": 3},
         {"addr": "juno1rvazh6ck86jqtckc3n3cprp0dkuv2zkcwwn3tm", "weight": 0},
         {"addr": "juno175q6smvgnuec5e62rs4chnu5cs8d98q2xgf4rx", "weight": 0}],
