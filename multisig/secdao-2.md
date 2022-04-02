@@ -5,15 +5,23 @@
 - @devcubed: `'{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"AgJi4syK8t4yJQHt0KUneD4XWN9WfFWrDbveilQPXaxA"}'`
 ## Cosmos SDK multisig
 ```
-junod keys add multi --multisig=bmorphism,rakataprime,devcubed --multisig-threshold=2
+junod keys add ring-juno-validator --multisig=bmorphism,rakataprime,devcubed --multisig-threshold=2
 
-- name: multi
+- name: ring-juno-validator
   type: multi
   address: juno1n33nhm7fes7umlw58lld77pkgh7qlp8lgphk9r
   pubkey: '{"@type":"/cosmos.crypto.multisig.LegacyAminoPubKey","threshold":2,"public_keys":[{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"AgJi4syK8t4yJQHt0KUneD4XWN9WfFWrDbveilQPXaxA"},{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A5GqllzyaexmhEQWQN3YJlyvhEFFU7XoharP9F7+HGzi"},{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A702+NkD5xO80qGR3jXzimxAT3RNC/bBDAuvHOO4tmLE"}]}'
   mnemonic: ""
   ```
 ## Rename the old validator
+| Field | Value |
+| --- | ----------- |
+| Name | Title |
+| Logo | Text |
+| Commission | |
+| Website | |
+| Minimum self-delegation | |
+
 **Name:** `InsecurityDAO`
 
 **Logo:** NA
