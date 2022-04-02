@@ -36,7 +36,7 @@ junod keys add ring-juno-validator --multisig=bmorphism,rakataprime,devcubed --m
 | Field | Value |
 | --- | ----------- |
 | Name | SecurityDAO |
-| Logo | Text |
+| Logo | [https://keybase.io/secdao](https://s3.amazonaws.com/keybase_processed_uploads/641b0d5f17c12764f27f6aa49d31fe05_360_360.jpg) |
 | Commission | 13.37% |
 | Website | https://secdao.xyz |
 | Minimum self-delegation | 1 `$JUNO` |
