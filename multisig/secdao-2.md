@@ -47,7 +47,7 @@ junod tx staking create-validator --amount 500ujuno --commission-max-change-rate
 ```
 
 ### junod JSON to be signed by the multisig
-#### Generate JSON using `--generate-only` flag
+#### Generate JSON by adding `--generate-only > ring-junod-validator.json` to the CLI command
 `ring-juno-validator.json`:
 
 ```
