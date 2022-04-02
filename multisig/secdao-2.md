@@ -33,13 +33,20 @@ junod keys add ring-juno-validator --multisig=bmorphism,rakataprime,devcubed --m
 **Minimum self-delegation:** `1 $JUNO`
 
 ## Establish new validator using the multisig
-**Name: **`SecurityDAO`
+| Field | Value |
+| --- | ----------- |
+| Name | SecurityDAO |
+| Logo | Text |
+| Commission | 13.37% |
+| Website | https://secdao.xyz |
+| Minimum self-delegation | 1 `$JUNO` |
+
 
 **Logo: **
 ![secdao](https://user-images.githubusercontent.com/1236584/161360149-29c98167-abbe-4c3c-bc71-b231e161e357.jpeg)
 **Details:** Intergalactic Pegging Intelligence Agency
 **Commission:** `13.37%`
-**Website:** `https://secdao.xyz`
+**Website:** ``
 **Minimum self-delegation:** `1 $JUNO`
 
 
