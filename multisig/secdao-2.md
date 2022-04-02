@@ -90,7 +90,7 @@ junod tx multisign \
     ring-juno-validator \
     rjv-b.json rjv-d.json rjv-r.json \
     --chain-id=juno-1 > rjv-quorum-signed.json
-
+```
 #### Broadcast the fully signed message on-chain
 ```
 junod tx broadcast rjv-quorum-signed.json \
