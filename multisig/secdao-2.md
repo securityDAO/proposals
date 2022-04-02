@@ -87,7 +87,7 @@ junod tx sign \
 ```
 junod tx multisign \
     ring-junod-validator.json \
-    multi \
+    ring-juno-validator \
     rjv-b.json rjv-d.json rjv-r.json \
     --chain-id=juno-1 > rjv-quorum-signed.json
 
