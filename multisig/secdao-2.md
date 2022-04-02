@@ -117,11 +117,13 @@ junod tx multisign \
     secdao-junod-validator.json \
     ring-juno-validator \
     sjv-b.json sjv-d.json rjv-r.json \
+    --node https://rpc-juno.nodes.guru:443 \
     --chain-id=juno-1 > sjv-quorum-signed.json
 ```
 #### Broadcast the fully signed message on-chain
 ```
 junod tx broadcast sjv-quorum-signed.json \
+    --node https://rpc-juno.nodes.guru:443 \
     --chain-id=juno-1 \
     --broadcast-mode=block
 ```
