@@ -69,21 +69,31 @@ junod tx sign \
     ring-junod-validator.json \
     --multisig=juno1n33nhm7fes7umlw58lld77pkgh7qlp8lgphk9r \
     --from=devcubed \
-    --output-document=rjv-bd.json \
+    --output-document=rjv-d.json \
     --chain-id=juno-1
 ```
 ##### @rakataprime
 ```
 junod tx sign \
-    rjv-bd.json \
+    ring-junod-validator.json \
     --multisig=juno1n33nhm7fes7umlw58lld77pkgh7qlp8lgphk9r \
     --from=rakataprime \
-    --output-document=rjv-bdr.json \
+    --output-document=rjv-r.json \
     --chain-id=juno-1
 ```
+
+#### Files are combined in one staging location and signed together
+
+```
+junod tx multisign \
+    ring-junod-validator.json \
+    multi \
+    rjv-b.json rjv-d.json rjv-r.json \
+    --chain-id=juno-1.json > rjv-quorum-signed.json
+
 #### Broadcast the fully signed message on-chain
 ```
-junod tx broadcast rjv-bdr.json \
+junod tx broadcast rjv-quorum-signed.json \
     --chain-id=juno-1 \
     --broadcast-mode=block
 ```
