@@ -39,14 +39,9 @@ junod keys add ring-juno-validator --multisig=bmorphism,rakataprime,devcubed --m
 | Logo | [https://keybase.io/secdao](https://s3.amazonaws.com/keybase_processed_uploads/641b0d5f17c12764f27f6aa49d31fe05_360_360.jpg) |
 | Commission | 13.37% |
 | Website | https://secdao.xyz |
+| Description | Intergalactic Pegging Intelligence Agency |
 | Minimum self-delegation | 1 `$JUNO` |
 
-
-**Logo: **
-![secdao](https://user-images.githubusercontent.com/1236584/161360149-29c98167-abbe-4c3c-bc71-b231e161e357.jpeg)
-**Details:** Intergalactic Pegging Intelligence Agency
-**Commission:** `13.37%`
-**Website:** ``
-**Minimum self-delegation:** `1 $JUNO`
+`junod tx staking create-validator  --amount 500ujuno  --commission-max-change-rate "0.01"  --commission-max-rate "0.10"  --commission-rate "0.0628"  --min-self-delegation "1"  --website "https://secdao.xyz"  --details ""  --pubkey=$(junod tendermint show-validator) --moniker 'SecurityDAO'  --chain-id juno-1  --gas-prices 0.025ujuno  --from juno1n33nhm7fes7umlw58lld77pkgh7qlp8lgphk9r`
 
 
