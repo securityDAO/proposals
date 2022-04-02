@@ -41,9 +41,49 @@ junod keys add ring-juno-validator --multisig=bmorphism,rakataprime,devcubed --m
 | Website | https://secdao.xyz |
 | Description | Intergalactic Pegging Intelligence Agency |
 | Minimum self-delegation | 1 `$JUNO` |
-### junod CLI
+### junod CLI command
 ```
-junod tx staking create-validator --amount 500ujuno --commission-max-change-rate "0.01" --commission-max-rate "0.10" --commission-rate "0.1337" --min-self-delegation "1" --website "https://secdao.xyz" --details "Intergalactic Pegging Intelligence Agency" --pubkey=$(junod tendermint show-validator) --moniker 'SecurityDAO' --chain-id juno-1 --gas-prices 0.025ujuno --from juno1n33nhm7fes7umlw58lld77pkgh7qlp8lgphk9r
+junod tx staking create-validator --amount 500ujuno --commission-max-change-rate "0.01" --commission-max-rate "0.15" --commission-rate "0.1337" --min-self-delegation "1" --website "https://secdao.xyz" --details "Intergalactic Pegging Intelligence Agency" --pubkey=$(junod tendermint show-validator) --moniker 'SecurityDAO' --chain-id juno-1 --gas-prices 0.025ujuno --from juno1n33nhm7fes7umlw58lld77pkgh7qlp8lgphk9r
 ```
 
+### junod JSON to be signed by the multisig
+#### Generate JSON using `--generate-only` flag
+`ring-juno-validator.json`:
 
+```
+{"body":{"messages":[{"@type":"/cosmos.staking.v1beta1.MsgCreateValidator","description":{"moniker":"SecurityDAO","identity":"","website":"https://secdao.xyz","security_contact":"","details":"Intergalactic Pegging Intelligence Agency"},"commission":{"rate":"0.133700000000000000","max_rate":"0.150000000000000000","max_change_rate":"0.010000000000000000"},"min_self_delegation":"1","delegator_address":"juno1n33nhm7fes7umlw58lld77pkgh7qlp8lgphk9r","validator_address":"junovaloper1n33nhm7fes7umlw58lld77pkgh7qlp8lhupe76","pubkey":{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A4XqzRYBOY+F9oguxP2tG5J3DeenDPqt+SKHIi8scafS"},"value":{"denom":"ujuno","amount":"500"}}],"memo":"","timeout_height":"0","extension_options":[],"non_critical_extension_options":[]},"auth_info":{"signer_infos":[],"fee":{"amount":[{"denom":"ujuno","amount":"5000"}],"gas_limit":"200000","payer":"","granter":""}},"signatures":[]}
+```
+#### Sign using individual keys
+##### @bmorphism
+```
+junod tx sign \
+    ring-junod-validator.json \
+    --multisig=juno1n33nhm7fes7umlw58lld77pkgh7qlp8lgphk9r \
+    --from=bmorphism \
+    --output-document=rjv-b.json \
+    --chain-id=juno-1
+```
+##### @devcubed
+```
+junod tx sign \
+    ring-junod-validator.json \
+    --multisig=juno1n33nhm7fes7umlw58lld77pkgh7qlp8lgphk9r \
+    --from=devcubed \
+    --output-document=rjv-bd.json \
+    --chain-id=juno-1
+```
+##### @rakataprime
+```
+junod tx sign \
+    rjv-bd.json \
+    --multisig=juno1n33nhm7fes7umlw58lld77pkgh7qlp8lgphk9r \
+    --from=rakataprime \
+    --output-document=rjv-bdr.json \
+    --chain-id=juno-1
+```
+#### Broadcast the fully signed message on-chain
+```
+junod tx broadcast rjv-bdr.json \
+    --chain-id=juno-1 \
+    --broadcast-mode=block
+```
