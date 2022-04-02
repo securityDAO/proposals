@@ -50,7 +50,7 @@ junod tx staking create-validator \
   --commission-rate "0.1337" \
   --min-self-delegation "1" \
   --website "https://secdao.xyz" \ 
-  --details "" \
+  --details "Intergalactic Pegging Intelligence Agency" \
   --pubkey=$(junod tendermint show-validator) \
   --moniker 'SecurityDAO' \
   --chain-id juno-1 \ 
