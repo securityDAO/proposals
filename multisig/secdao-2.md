@@ -1,4 +1,4 @@
-# ring-juno-validator multisig 🔑🔑🔑 + Junø mainnet validator 🔎⛓ + final [WAGMI]()
+# ring-juno-validator multisig 🔑🔑🔑 ⬙ Junø mainnet validator 🔎⛓
 ![ring-juno-validator](https://user-images.githubusercontent.com/1236584/161363989-5d2cd3ae-f8cf-4374-956c-5d5ff0d452fc.jpeg)
 ## Members - suggested names for the commands below to work + PubKeys
 - rakataprime `'{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A702+NkD5xO80qGR3jXzimxAT3RNC/bBDAuvHOO4tmLE"}'`
@@ -86,6 +86,7 @@ junod tx sign \
     --multisig=juno1n33nhm7fes7umlw58lld77pkgh7qlp8lgphk9r \
     --from=bmorphism \
     --output-document=sjv-b.json \
+    --node https://rpc-juno.nodes.guru:443 \
     --chain-id=juno-1
 ```
 ###### @devcubed
@@ -94,6 +95,7 @@ junod tx sign \
     secdao-junod-validator.json \
     --multisig=juno1n33nhm7fes7umlw58lld77pkgh7qlp8lgphk9r \
     --from=devcubed \
+    --node https://rpc-juno.nodes.guru:443 \
     --output-document=sjv-d.json \
     --chain-id=juno-1
 ```
@@ -103,6 +105,7 @@ junod tx sign \
     secdao-junod-validator.json \
     --multisig=juno1n33nhm7fes7umlw58lld77pkgh7qlp8lgphk9r \
     --from=rakataprime \
+    --node https://rpc-juno.nodes.guru:443 \
     --output-document=sjv-r.json \
     --chain-id=juno-1
 ```
