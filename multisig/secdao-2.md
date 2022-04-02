@@ -42,6 +42,6 @@ junod keys add ring-juno-validator --multisig=bmorphism,rakataprime,devcubed --m
 | Description | Intergalactic Pegging Intelligence Agency |
 | Minimum self-delegation | 1 `$JUNO` |
 
-`junod tx staking create-validator  --amount 500ujuno  --commission-max-change-rate "0.01"  --commission-max-rate "0.10"  --commission-rate "0.0628"  --min-self-delegation "1"  --website "https://secdao.xyz"  --details ""  --pubkey=$(junod tendermint show-validator) --moniker 'SecurityDAO'  --chain-id juno-1  --gas-prices 0.025ujuno  --from juno1n33nhm7fes7umlw58lld77pkgh7qlp8lgphk9r`
+`junod tx staking create-validator  --amount 500ujuno  --commission-max-change-rate "0.01"  --commission-max-rate "0.10"  --commission-rate "0.1337"  --min-self-delegation "1"  --website "https://secdao.xyz"  --details ""  --pubkey=$(junod tendermint show-validator) --moniker 'SecurityDAO'  --chain-id juno-1  --gas-prices 0.025ujuno  --from juno1n33nhm7fes7umlw58lld77pkgh7qlp8lgphk9r`
 
 
