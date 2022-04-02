@@ -14,16 +14,24 @@ junod keys add multi --multisig=bmorphism,rakataprime,devcubed --multisig-thresh
   mnemonic: ""
   ```
 ## Rename the old validator
-Name: `InsecurityDAO`
-Logo: <>
-Commission: `13.37%`
-Website: `https://secdao.xyz`
-Minimum self-delegation: `1 $JUNO`
+**Name:** `InsecurityDAO`
+
+**Logo:** NA
+
+**Commission:** `6.28%`
+
+**Website:** `https://secdao.xyz`
+
+**Minimum self-delegation:** `1 $JUNO`
+
 ## Establish new validator using the multisig
-Name: `SecurityDAO`
-Logo: <>
-Details: Intergalactic Pegging Intelligence Agency
-Commission: `13.37%`
-Website: `https://secdao.xyz`
-Minimum self-delegation: `1 $JUNO`
+**Name: **`SecurityDAO`
+
+**Logo: **
+![secdao](https://user-images.githubusercontent.com/1236584/161360149-29c98167-abbe-4c3c-bc71-b231e161e357.jpeg)
+**Details:** Intergalactic Pegging Intelligence Agency
+**Commission:** `13.37%`
+**Website:** `https://secdao.xyz`
+**Minimum self-delegation:** `1 $JUNO`
+
 
