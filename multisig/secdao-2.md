@@ -1,8 +1,8 @@
 # Instantiate ring-juno-validator
 ## Members (PubKeys)
-- @rakataprime: `'{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A702+NkD5xO80qGR3jXzimxAT3RNC/bBDAuvHOO4tmLE"}'`
-- @bmorphism: `'{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A5GqllzyaexmhEQWQN3YJlyvhEFFU7XoharP9F7+HGzi"}'`
-- @devcubed: `'{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"AgJi4syK8t4yJQHt0KUneD4XWN9WfFWrDbveilQPXaxA"}'`
+- rakataprime: `'{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A702+NkD5xO80qGR3jXzimxAT3RNC/bBDAuvHOO4tmLE"}'`
+- bmorphism: `'{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A5GqllzyaexmhEQWQN3YJlyvhEFFU7XoharP9F7+HGzi"}'`
+- devcubed: `'{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"AgJi4syK8t4yJQHt0KUneD4XWN9WfFWrDbveilQPXaxA"}'`
 ## Cosmos SDK multisig
 ```
 junod keys add ring-juno-validator --multisig=bmorphism,rakataprime,devcubed --multisig-threshold=2
@@ -54,7 +54,24 @@ junod tx staking create-validator --amount 500ujuno --commission-max-change-rate
 {"body":{"messages":[{"@type":"/cosmos.staking.v1beta1.MsgCreateValidator","description":{"moniker":"SecurityDAO","identity":"","website":"https://secdao.xyz","security_contact":"","details":"Intergalactic Pegging Intelligence Agency"},"commission":{"rate":"0.133700000000000000","max_rate":"0.150000000000000000","max_change_rate":"0.010000000000000000"},"min_self_delegation":"1","delegator_address":"juno1n33nhm7fes7umlw58lld77pkgh7qlp8lgphk9r","validator_address":"junovaloper1n33nhm7fes7umlw58lld77pkgh7qlp8lhupe76","pubkey":{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A4XqzRYBOY+F9oguxP2tG5J3DeenDPqt+SKHIi8scafS"},"value":{"denom":"ujuno","amount":"500"}}],"memo":"","timeout_height":"0","extension_options":[],"non_critical_extension_options":[]},"auth_info":{"signer_infos":[],"fee":{"amount":[{"denom":"ujuno","amount":"5000"}],"gas_limit":"200000","payer":"","granter":""}},"signatures":[]}
 ```
 #### Sign using individual keys
-##### @bmorphism
+##### Prerequisities
+- private local key of the signing member needs to be recovered and added as suggested name for commands to work
+- keys of other multisig members need to be added as well using `junod keys add --pubkey=<entire single quote string from Members>`
+- multisig needs to be derived, i.e. `junod keys add ring-juno-validator --multisig=bmorphism,rakataprime,devcubed --multisig-threshold=2` is run
+
+To check, you could verify that the output of the `junod keys list | grep name` has the same entities (may be in different order):
+
+```
+- name: bmorphism
+- name: devcubed
+- name: rakataprime
+- name: ring-juno-validator
+```
+
+If the output contains all these, you are ready to execute your specific signing command below.
+
+##### Individual steps
+###### @bmorphism
 ```
 junod tx sign \
     ring-junod-validator.json \
@@ -63,7 +80,7 @@ junod tx sign \
     --output-document=rjv-b.json \
     --chain-id=juno-1
 ```
-##### @devcubed
+###### @devcubed
 ```
 junod tx sign \
     ring-junod-validator.json \
@@ -72,7 +89,7 @@ junod tx sign \
     --output-document=rjv-d.json \
     --chain-id=juno-1
 ```
-##### @rakataprime
+###### @rakataprime
 ```
 junod tx sign \
     ring-junod-validator.json \
