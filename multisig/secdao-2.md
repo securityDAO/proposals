@@ -1,4 +1,4 @@
-# Instantiate ring-juno-validator
+# Instantiate ring-juno-validator multisig 🔑🔑🔑 + use it to register mainnet validator 🔎⛓
 ![ring-juno-validator](https://user-images.githubusercontent.com/1236584/161363989-5d2cd3ae-f8cf-4374-956c-5d5ff0d452fc.jpeg)
 ## Members - suggested names for the commands below to work + PubKeys
 - rakataprime `'{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A702+NkD5xO80qGR3jXzimxAT3RNC/bBDAuvHOO4tmLE"}'`
