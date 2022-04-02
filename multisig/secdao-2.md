@@ -61,6 +61,7 @@ junod tx staking create-validator \
   --details "Intergalactic Pegging Intelligence Agency" \
   --pubkey=$(junod tendermint show-validator) \
   --moniker 'SecurityDAO' \
+  --node https://rpc-juno.nodes.guru:443 \
   --chain-id juno-1 \
   --gas-prices 0.025ujuno \
   --from juno1n33nhm7fes7umlw58lld77pkgh7qlp8lgphk9r
