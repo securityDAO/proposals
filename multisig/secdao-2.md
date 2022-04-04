@@ -1,27 +1,130 @@
-# Compensation Freeze, Compensation Adjustment, Bounty Pool Establishment 
-## Why
+# secdao-2 - ring-juno-validator multisig 🔑🔑🔑 ⬙ Junø mainnet validator 🔎⛓
+![ring-juno-validator](https://user-images.githubusercontent.com/1236584/161363989-5d2cd3ae-f8cf-4374-956c-5d5ff0d452fc.jpeg)
+## Members - suggested names for the commands below to work + PubKeys
+Import the public keys of the members other than yourself using one of the commands below:
 
-Current compensation of 256 Juno UBI per week is not sustainable for the future.  Current budget allocation is misaligned with Dao's needs and goals.  If previous plans had worekd out and everyone had executed successfully we would not be in this situation. 
+- `junod keys add rakataprime --pubkey='{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A702+NkD5xO80qGR3jXzimxAT3RNC/bBDAuvHOO4tmLE"}'`
+- `junod keys add bmorphism --pubkeys='{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A5GqllzyaexmhEQWQN3YJlyvhEFFU7XoharP9F7+HGzi"}'`
+- `junod keys add devcubed --pubkey='{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"AgJi4syK8t4yJQHt0KUneD4XWN9WfFWrDbveilQPXaxA"}'`
 
-The main causes are that the initial DAO grant was never intended to support more than 1-2 people and only through Feb 2022, the DAO is not being compensated at levels comparable to what competition is charging for audits, the second big audit for us (DaoDao) is not paying a market rate for the audit in raw tokens, the audit pipeline sales lifecycle is slower than initially percieved, the team working on the validators has failed to deliver a working mainnet validator in a timely way, and the team has not chosen to persue an equity/token compensation model that would be amenable to raising capital from investors. 
+For your locally imported / recovered private wallet, please use a suggested name above (e.g. `devcubed`) or modify as appropriate in the commands that follow.
+### Your own key vs those of other members
+This guide assumes that as one of the members, you will be in possession of means to recover the private key.
 
-Almost all early stage startups compensate members at rates far below what we are currently compensating members at.  Addtionally, the original members have now recieved between 50-70k equivalent in JUNO.  One option to bring pay into line with other starups / daos would be to freeze compensation at around 50-70K for the entire first year compensation.  
+Example: if I am in possession of the private key that corresponds to `AgJi4syK8t4yJQHt0KUneD4XWN9WfFWrDbveilQPXaxA`
+`junod keys add devcubed --recover` and the Bech32 magic phrase.
 
-Instead of proposing an annual pay freeze, this proposes to freeze pay for two weeks to submit further grants and continue developing sales leads in order to reduce the uncertainty around near term funding and sales.  This will also change the compensation to be fixed to only be based on renewable sources of treasury yield instead of eating out of the principle.   
+Naming it `devcubed` as suggested is optional and will make the steps below not require modification.
+## Cosmos SDK multisig
+```
+junod keys add ring-juno-validator --multisig=bmorphism,rakataprime,devcubed --multisig-threshold=2
 
-To rectify this situation this proposals seeks to enact the following actions:
+- name: ring-juno-validator
+  type: multi
+  address: juno1n33nhm7fes7umlw58lld77pkgh7qlp8lgphk9r
+  pubkey: '{"@type":"/cosmos.crypto.multisig.LegacyAminoPubKey","threshold":2,"public_keys":[{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"AgJi4syK8t4yJQHt0KUneD4XWN9WfFWrDbveilQPXaxA"},{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A5GqllzyaexmhEQWQN3YJlyvhEFFU7XoharP9F7+HGzi"},{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A702+NkD5xO80qGR3jXzimxAT3RNC/bBDAuvHOO4tmLE"}]}'
+  mnemonic: ""
+  ```
+## Rename the inactive validator
+`InSecurityDAO` as the temporary name, pending decommissioning (carried out off-chain @rakataprime)
 
-* Immediately freeze all compensation for 2 weeks 
-* Estabilish a bounty pool system on a monthly cadence ( All bounties are determined / outlined at the begining of a month based on yield farming and validator rewards only.  The bounty payout will never be allowed to exceed the weekly rewards.  If a multiweek bounty were to exceed the max cap for the week,  the total bounties for the week would added together and payed out each week on a linearly scaled basis to each of the recipients. 
-* Total compensation bounty pool is to be no more than treasury staked rewards and validator rewards per week 
-* 90% of bounty pool is pre-accolated to vision-centric tasks related to grants, audits,  or smart contracts.  Examples of tasks that qualify for this pool include audit template, audit sales, audit formatting, audit drafting, audit intake and presales, grant drafting, audit vulnerabilty finding, and smart contract development. Examples of tasks that are explicitly excluded from this are all non-rust software development efforts, devops tasks, cloud infrastructure management tasks, validator-related maintaince / monitoring, travel to conferences, internal time spent on bounty system interactions, git issue curation tasks, and social media posts. 
+## Establish new validator using the multisig
+| Field | Value |
+| --- | ----------- |
+| Name | SecurityDAO |
+| Logo | [https://keybase.io/secdao](https://s3.amazonaws.com/keybase_processed_uploads/641b0d5f17c12764f27f6aa49d31fe05_360_360.jpg) |
+| Commission | 13.37% |
+| Website | https://secdao.xyz |
+| Description | Intergalactic Pegging Intelligence Agency |
+| Minimum self-delegation | 1 `$JUNO` |
+### junod CLI command
+```
+junod tx staking create-validator \
+  --amount 500ujuno \
+  --commission-max-change-rate "0.01" \
+  --commission-max-rate "0.15" \
+  --commission-rate "0.1337" \
+  --min-self-delegation "1" \
+  --website "https://secdao.xyz" \
+  --details "Intergalactic Peg Zone Intelligence Agency" \
+  --pubkey=$(junod tendermint show-validator) \
+  --moniker 'securityDAO' \
+  --node https://rpc-juno.nodes.guru:443 \
+  --chain-id juno-1 \
+  --gas-prices 0.025ujuno \
+  --from juno1n33nhm7fes7umlw58lld77pkgh7qlp8lgphk9r
+```
 
-These actions will allow us to establish a sustainable compensation floor for the DAO which will steadily increase with time.  By focusing on sustainablity, we can remove the runaway concerns and focus more on execution and delivery.  
+### junod JSON to be signed by the multisig
+#### Generate JSON by adding `--generate-only > secdao-junod-validator.json` to the CLI command
+`secdao-juno-validator.json`:
 
-## Actions to be carried out off-chain
+```
+{"body":{"messages":[{"@type":"/cosmos.staking.v1beta1.MsgCreateValidator","description":{"moniker":"SecurityDAO","identity":"","website":"https://secdao.xyz","security_contact":"","details":"Intergalactic Pegging Intelligence Agency"},"commission":{"rate":"0.133700000000000000","max_rate":"0.150000000000000000","max_change_rate":"0.010000000000000000"},"min_self_delegation":"1","delegator_address":"juno1n33nhm7fes7umlw58lld77pkgh7qlp8lgphk9r","validator_address":"junovaloper1n33nhm7fes7umlw58lld77pkgh7qlp8lhupe76","pubkey":{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A4XqzRYBOY+F9oguxP2tG5J3DeenDPqt+SKHIi8scafS"},"value":{"denom":"ujuno","amount":"500"}}],"memo":"","timeout_height":"0","extension_options":[],"non_critical_extension_options":[]},"auth_info":{"signer_infos":[],"fee":{"amount":[{"denom":"ujuno","amount":"5000"}],"gas_limit":"200000","payer":"","granter":""}},"signatures":[]}
+```
+#### Sign using individual keys
+##### Prerequisities
+- private local key of the signing member needs to be recovered and added as suggested name for commands to work
+- keys of other multisig members need to be added as well using `junod keys add --pubkey=<entire single quote string from Members>`
+- multisig needs to be derived, i.e. `junod keys add ring-juno-validator --multisig=bmorphism,rakataprime,devcubed --multisig-threshold=2` is run
 
-* Estabilishment of April, 2022 Bounty Tasks / Task pool
-* Estabilishment of Bounty System Standard Operating Procedures
+To check, you could verify that the output of the `junod keys list | grep name` has the same entities (may be in different order):
 
-## Costs
-No Immediate Costs 
+```
+- name: bmorphism
+- name: devcubed
+- name: rakataprime
+- name: ring-juno-validator
+```
+
+If the output contains all these, you are ready to execute your specific signing command below.
+
+##### Individual steps
+###### @bmorphism
+```
+junod tx sign \
+    secdao-junod-validator.json \
+    --multisig=juno1n33nhm7fes7umlw58lld77pkgh7qlp8lgphk9r \
+    --from=bmorphism \
+    --output-document=sjv-b.json \
+    --node https://rpc-juno.nodes.guru:443 \
+    --chain-id=juno-1
+```
+###### @devcubed
+```
+junod tx sign \
+    secdao-junod-validator.json \
+    --multisig=juno1n33nhm7fes7umlw58lld77pkgh7qlp8lgphk9r \
+    --from=devcubed \
+    --node https://rpc-juno.nodes.guru:443 \
+    --output-document=sjv-d.json \
+    --chain-id=juno-1
+```
+###### @rakataprime
+```
+junod tx sign \
+    secdao-junod-validator.json \
+    --multisig=juno1n33nhm7fes7umlw58lld77pkgh7qlp8lgphk9r \
+    --from=rakataprime \
+    --node https://rpc-juno.nodes.guru:443 \
+    --output-document=sjv-r.json \
+    --chain-id=juno-1
+```
+
+#### Files are combined in one staging location and signed together
+
+```
+junod tx multisign \
+    secdao-junod-validator.json \
+    ring-juno-validator \
+    sjv-b.json sjv-d.json rjv-r.json \
+    --node https://rpc-juno.nodes.guru:443 \
+    --chain-id=juno-1 > sjv-quorum-signed.json
+```
+#### Broadcast the fully signed message on-chain
+```
+junod tx broadcast sjv-quorum-signed.json \
+    --node https://rpc-juno.nodes.guru:443 \
+    --chain-id=juno-1 \
+    --broadcast-mode=block
+```
