@@ -1,9 +1,13 @@
 # secdao-2 - ring-juno-validator multisig 🔑🔑🔑 ⬙ Junø mainnet validator 🔎⛓
 ![ring-juno-validator](https://user-images.githubusercontent.com/1236584/161363989-5d2cd3ae-f8cf-4374-956c-5d5ff0d452fc.jpeg)
 ## Members - suggested names for the commands below to work + PubKeys
-- rakataprime `'{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A702+NkD5xO80qGR3jXzimxAT3RNC/bBDAuvHOO4tmLE"}'`
-- bmorphism `'{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A5GqllzyaexmhEQWQN3YJlyvhEFFU7XoharP9F7+HGzi"}'`
-- devcubed `'{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"AgJi4syK8t4yJQHt0KUneD4XWN9WfFWrDbveilQPXaxA"}'`
+Import the public keys of the members other than yourself using one of the commands below:
+
+- `junod keys add rakataprime --pubkey='{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A702+NkD5xO80qGR3jXzimxAT3RNC/bBDAuvHOO4tmLE"}'`
+- `junod keys add bmorphism --pubkeys='{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A5GqllzyaexmhEQWQN3YJlyvhEFFU7XoharP9F7+HGzi"}'`
+- `junod keys add devcubed --pubkey='{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"AgJi4syK8t4yJQHt0KUneD4XWN9WfFWrDbveilQPXaxA"}'`
+
+For your locally imported / recovered private wallet, please use a suggested name above (e.g. `devcubed`) or modify as appropriate in the commands that follow.
 ### Your own key vs those of other members
 This guide assumes that as one of the members, you will be in possession of means to recover the private key.
 
@@ -21,24 +25,8 @@ junod keys add ring-juno-validator --multisig=bmorphism,rakataprime,devcubed --m
   pubkey: '{"@type":"/cosmos.crypto.multisig.LegacyAminoPubKey","threshold":2,"public_keys":[{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"AgJi4syK8t4yJQHt0KUneD4XWN9WfFWrDbveilQPXaxA"},{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A5GqllzyaexmhEQWQN3YJlyvhEFFU7XoharP9F7+HGzi"},{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A702+NkD5xO80qGR3jXzimxAT3RNC/bBDAuvHOO4tmLE"}]}'
   mnemonic: ""
   ```
-## Rename the old validator
-| Field | Value |
-| --- | ----------- |
-| Name | Title |
-| Logo | Text |
-| Commission | |
-| Website | |
-| Minimum self-delegation | |
-
-**Name:** `InsecurityDAO`
-
-**Logo:** NA
-
-**Commission:** `6.28%`
-
-**Website:** `https://secdao.xyz`
-
-**Minimum self-delegation:** `1 $JUNO`
+## Rename the inactive validator
+`InSecurityDAO` as the temporary name, pending decommissioning (carried out off-chain @rakataprime)
 
 ## Establish new validator using the multisig
 | Field | Value |
