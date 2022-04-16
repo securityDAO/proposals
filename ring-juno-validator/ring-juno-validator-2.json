@@ -18,8 +18,8 @@
     "fee": {
       "amount": [
         {
-          "denom": "juno",
-          "amount": "1"
+          "denom": "ujuno",
+          "amount": "5420"
         }
       ],
       "gas_limit": "200000",
