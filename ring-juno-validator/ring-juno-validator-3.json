@@ -19,7 +19,7 @@
       "amount": [
         {
           "denom": "ujuno",
-          "amount": "7420"
+          "amount": "10101"
         }
       ],
       "gas_limit": "400000",
