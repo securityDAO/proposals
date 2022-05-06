@@ -3,7 +3,7 @@
     "messages": [
       {
         "@type": "/cosmos.gov.v1beta1.MsgVote",
-        "proposal_id": "20",
+        "proposal_id": "21",
         "voter": "juno1n33nhm7fes7umlw58lld77pkgh7qlp8lgphk9r",
         "option": "VOTE_OPTION_ABSTAIN"
       }
