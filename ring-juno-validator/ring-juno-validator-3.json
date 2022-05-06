@@ -8,7 +8,7 @@
         "option": "VOTE_OPTION_ABSTAIN"
       }
     ],
-    "memo": "We welcome gov as code, but as the DAO to audit, it is a principled Abstain (delegators can override)",
+    "memo": "We welcome gov as code, but in our capacity as the DAO to audit, it is a principled Abstain (token delegators can override)",
     "timeout_height": "0",
     "extension_options": [],
     "non_critical_extension_options": []
