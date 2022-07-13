@@ -1,4 +1,4 @@
-# secdao-2 - ring-juno-validator multisig 🔑🔑🔑 ⬙ Junø mainnet validator 🔎⛓
+# secdao-2 - ring-juno-validator multisig 🔑🔑 ⬙ Junø mainnet validator 🔎⛓
 ![ring-juno-validator](https://user-images.githubusercontent.com/1236584/161363989-5d2cd3ae-f8cf-4374-956c-5d5ff0d452fc.jpeg)
 ## Members - suggested names for the commands below to work + PubKeys
 Import the public keys of the members other than yourself using one of the commands below:
