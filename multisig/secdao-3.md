@@ -1,6 +1,11 @@
 
+# set validator rewards address
+```{"body":{"messages":[{"@type":"/cosmos.distribution.v1beta1.MsgSetWithdrawAddress","delegator_address":"juno1n33nhm7fes7umlw58lld77pkgh7qlp8lgphk9r","withdraw_address":"juno1n33nhm7fes7umlw58lld77pkgh7qlp8lgphk9r"}],"memo":"","timeout_height":"0","extension_options":[],"non_critical_extension_options":[]},"auth_info":{"signer_infos":[],"fee":{"amount":[],"gas_limit":"200000","payer":"","granter":""}},"signatures":[]}```
 
-# original tx
+#### rakata signed
+```{"signatures":[{"public_key":{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A702+NkD5xO80qGR3jXzimxAT3RNC/bBDAuvHOO4tmLE"},"data":{"single":{"mode":"SIGN_MODE_LEGACY_AMINO_JSON","signature":"dHYFuKATLiU5+T9TJILzhAns16ek22ZjssGe0UegVDwH59e+r3qsQ/O3TPP1qTAoNzccOuetHOCl8aobj5s4GQ=="}},"sequence":"8"}]}``
+
+# prev original tx
 ```{"body":{"messages":[{"@type":"/cosmos.bank.v1beta1.MsgSend","from_address":"juno1n33nhm7fes7umlw58lld77pkgh7qlp8lgphk9r","to_address":"juno1h24ga7artczlkakm75tf2js3surgxf0m0gw3s8","amount":[{"denom":"juno","amount":"992"}]}],"memo":"","timeout_height":"0","extension_options":[],"non_critical_extension_options":[]},"auth_info":{"signer_infos":[],"fee":{"amount":[{"denom":"ujuno","amount":"5000"}],"gas_limit":"200000","payer":"","granter":""}},"signatures":[]}```
 
 
