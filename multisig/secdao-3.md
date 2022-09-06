@@ -6,3 +6,6 @@
 
 ## rakata signed
 ```{"signatures":[{"public_key":{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A702+NkD5xO80qGR3jXzimxAT3RNC/bBDAuvHOO4tmLE"},"data":{"single":{"mode":"SIGN_MODE_LEGACY_AMINO_JSON","signature":"HM4zoX1ww6BxvbUxEYq9SF7GzVqZLkbBwcolt4phr2FSZOjbtqSdgk3c806RVPgdzxStkbBZUGX0oh5WNJgo5w=="}},"sequence":"7"}]}```
+
+## bmorphism signed
+```{"signatures":[{"public_key":{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A5GqllzyaexmhEQWQN3YJlyvhEFFU7XoharP9F7+HGzi"},"data":{"single":{"mode":"SIGN_MODE_LEGACY_AMINO_JSON","signature":"a7u9ilPC6kCuFrGMW5oQKf2IFAzyTc4iH6OOGfcGf0gojkVbTkBtRuu00xe0RMRDm7tFjSyoJpGEu9lttJL/zQ=="}},"sequence":"7"}]}```
