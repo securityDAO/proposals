@@ -21,3 +21,8 @@
 
 ## Rakata signed again (updated fee)
 ```{"signatures":[{"public_key":{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A702+NkD5xO80qGR3jXzimxAT3RNC/bBDAuvHOO4tmLE"},"data":{"single":{"mode":"SIGN_MODE_LEGACY_AMINO_JSON","signature":"dn1hRZQR40cNJgeD7Q9GyqMei020QQuIsPF4SfMduQF35gj1/e7WBxePZEGI+dIH3HEYxD+voYXCI0JkhlKEHg=="}},"sequence":"7"}]}```
+
+## @bmorphism, first of his name, signs as well
+```
+{"signatures":[{"public_key":{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"A5GqllzyaexmhEQWQN3YJlyvhEFFU7XoharP9F7+HGzi"},"data":{"single":{"mode":"SIGN_MODE_LEGACY_AMINO_JSON","signature":"9DeZiPD54m2iN6M6krObvqCkhaXx1iZFAIkzJTwn73ZYp4dQ5z5uSd2TaNzW9XpiEo8dpayTV95pBbdP+l1qbA=="}},"sequence":"8"}]}
+```
